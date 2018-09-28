@@ -9,6 +9,7 @@
      <div class="portrait" @click="portrait">
         <p> &#xe600;</p>
         <h4>独步颜良的大彬</h4>
+       <p>fdsfsdfsdf</p>
       </div>
       <div class="first">
         <div  class="one">
