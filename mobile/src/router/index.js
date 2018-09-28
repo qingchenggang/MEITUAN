@@ -5,7 +5,12 @@ import register from '@/pages/register'
 import main from '@/pages/main'
 import home from '@/pages/home/home'
 import order from '@/pages/order'
-import my from '@/pages/my'
+import my from '@/pages/my/my'
+import collection from '@/pages/my/collection'
+import businessCollection from '@/pages/my/business-collection'
+import contentCollection from '@/pages/my/content-collection'
+import productCollection from '@/pages/my/product-collection'
+
 import recent from '@/pages/recent/recent'
 import one from '@/pages/recent/one'
 import two from '@/pages/recent/two'
@@ -66,7 +71,6 @@ export default new Router({
 
           ]
 				},
-
 				{
 					path: '/order',
 					name: 'order',
@@ -79,7 +83,7 @@ export default new Router({
 					path: '/my',
 					name: 'my',
 					component: my,
-         meta: {
+          meta: {
             keepAlive: true // 需要被缓存
           }
 				}
@@ -97,6 +101,7 @@ export default new Router({
       meta: {
         keepAlive: true // 需要被缓存
       }
+
     },
     {
       path: '/lifeDetail/:lifeid',
@@ -123,6 +128,28 @@ export default new Router({
 			path: '/register',
 			name: 'register',
 			component: register
-		}
+		},
+    {
+      path: '/collection',
+      name: 'collection',
+      component: collection,
+      children:[
+        {
+          path: '',
+          name: 'businessCollection',
+          component: businessCollection
+        },
+        {
+          path: '/contentCollection',
+          name: 'contentCollection',
+          component: contentCollection
+        },  {
+          path: '/productCollection',
+          name: 'productCollection',
+          component: productCollection
+        }
+      ]
+    }
+
 	]
 })

@@ -1,6 +1,6 @@
 <template>
 	<div id="my">
-    <div  class="big" style="background-image: url('../../static/images/my/wode.png')">
+    <div  class="big" style="background-image: url('../../../static/images/my/wode.png')">
      <div class="hearder1">
         <span class="set" @click="set">&#xe608;</span>
         <span class="artificial" @click="artificial">&#xe73b;</span>
@@ -9,20 +9,20 @@
      <div class="portrait" @click="portrait">
         <p> &#xe600;</p>
         <h4>独步颜良的大彬</h4>
-       <p>fdsfsdfsdf</p>
+
       </div>
       <div class="first">
         <div  class="one">
-          <div class="start">
-            <img src="../../static/images/my/start.png" alt="">
+          <div class="start" @click="start">
+            <img src="../../../static/images/my/start.png" alt="">
             <p>收藏</p>
           </div>
           <div class="pingjia">
-            <img src="../../static/images/my/pingjia.png" alt="">
+            <img src="../../../static/images/my/pingjia.png" alt="">
             <p>评价</p>
           </div>
           <div class="liulan">
-            <img src="../../static/images/my/liulan.png" alt="">
+            <img src="../../../static/images/my/liulan.png" alt="">
             <p>最近浏览</p>
           </div>
 
@@ -32,31 +32,31 @@
       <div class="second">
           <div class="two">
             <div class="start1">
-              <img src="../../static/images/my/wallet.png" alt="">
+              <img src="../../../static/images/my/wallet.png" alt="">
               <p>我的钱包</p>
             </div>
             <div class="start1">
-              <img src="../../static/images/my/quan.png" alt="">
+              <img src="../../../static/images/my/quan.png" alt="">
               <p>红包/卡券</p>
             </div>
             <div class="start1">
-              <img src="../../static/images/my/pay.png" alt="">
+              <img src="../../../static/images/my/pay.png" alt="">
               <p>闪付</p>
             </div>
             <div class="start1">
-              <img src="../../static/images/my/jie.png" alt="">
+              <img src="../../../static/images/my/jie.png" alt="">
               <p>借钱</p>
             </div>
             <div class="start1">
-              <img src="../../static/images/my/card.png" alt="">
+              <img src="../../../static/images/my/card.png" alt="">
               <p>美团信用卡</p>
             </div>
             <div class="start1">
-              <img src="../../static/images/my/financial.png" alt="">
+              <img src="../../../static/images/my/financial.png" alt="">
               <p>理财</p>
             </div>
             <div class="start1">
-              <img src="../../static/images/my/recharge.png" alt="">
+              <img src="../../../static/images/my/recharge.png" alt="">
               <p>手机充值</p>
             </div>
           </div>
@@ -65,27 +65,27 @@
       <div class="third">
         <div class="three">
           <div class="start1">
-            <img src="../../static/images/my/member.png" alt="">
+            <img src="../../../static/images/my/member.png" alt="">
             <p>会员中心</p>
           </div>
           <div class="start1">
-            <img src="../../static/images/my/welfare.png" alt="">
+            <img src="../../../static/images/my/welfare.png" alt="">
             <p>美团公益</p>
           </div>
           <div class="start1">
-            <img src="../../static/images/my/free.png" alt="">
+            <img src="../../../static/images/my/free.png" alt="">
             <p>免流量</p>
           </div>
           <div class="start1">
-            <img src="../../static/images/my/invoice.png" alt="">
+            <img src="../../../static/images/my/invoice.png" alt="">
             <p>发票助手</p>
           </div>
           <div class="start1">
-            <img src="../../static/images/my/cooperation.png" alt="">
+            <img src="../../../static/images/my/cooperation.png" alt="">
             <p>我要合作</p>
           </div>
           <div class="start1">
-            <img src="../../static/images/my/about.png" alt="">
+            <img src="../../../static/images/my/about.png" alt="">
             <p>关于美团</p>
           </div>
         </div>
@@ -126,6 +126,12 @@
         },
         portrait(){
 
+        },
+        start(){
+          this.$router.push({
+            path:'collection'
+
+          })
         }
 
       },

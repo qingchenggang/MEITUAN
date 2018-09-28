@@ -6,5 +6,6 @@ export default{
   longitude:'104.06667',//经度
   address:{},
   count:0,
+  name:'',
   meitodos:[]
 }

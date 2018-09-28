@@ -70,13 +70,13 @@
     data(){
       return{
         lists:[],
-
         success:false,
         fail:false,
         share_box:false,
         isB:true,
         isC:false,
-        newLists:[]
+        newLists:[],
+        localData:[]
       }
     },
     async mounted(){
@@ -109,16 +109,10 @@
         var start=$(".start1").html()
         ScoreInit(start); //初始化，参数是0～5的数字，代表星数，传空默认0颗星
       })
-    //  alert(this.lists)
-   /*   alert(this.newLists)
-      if(this.newLists==''){
-        this.newLists=this.lists
-      }else{
-        this.newLists=JSON.parse(localStorage.getItem("zhuangtai"));
-      }*/
     },
     created(){
-
+     /* alert(this.$route.params.meishiid)*/
+          //alert(this.lists[].id)
     },
     methods:{
       go(){
@@ -148,7 +142,8 @@
           this.success=true
           this.lists[id-1].kong=false
          // localStorage.setItem('zhuangtai', JSON.stringify(this.lists));
-        //  localStorage.setItem('zhuangtai', JSON.stringify(this.lists[id-1].kong));
+         this.localData.push(this.lists[id-1]);
+          localStorage.setItem('zhuangtai', JSON.stringify(this.localData));
         //  console.log(this.newLists)
           setTimeout(()=>{
             this.success=false
@@ -157,6 +152,9 @@
          // alert("已经收藏了变取消收藏")
           this.fail=true
           this.lists[id-1].kong=true
+
+          this.localData.splice([id-1],1);
+          localStorage.setItem('zhuangtai', JSON.stringify(this.localData));
           //localStorage.setItem('zhuangtai', JSON.stringify(this.lists));
           //localStorage.setItem('zhuangtai', JSON.stringify(this.lists[id-1].kong));
           //console.log(this.newLists)
