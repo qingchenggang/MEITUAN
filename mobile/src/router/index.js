@@ -97,10 +97,8 @@ export default new Router({
     {
       path: '/meishiDetail/:meishiid',
       name: 'meishiDetail',
-      component: meishiDetail,
-      meta: {
-        keepAlive: true // 需要被缓存
-      }
+      component: meishiDetail
+
 
     },
     {
