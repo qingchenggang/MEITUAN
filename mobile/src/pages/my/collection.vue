@@ -40,7 +40,7 @@
           this.isB=false
           this.isC=false
           this.$router.push({
-            path:'collection'
+            path:'businessCollection'
           })
         },
         product(){
@@ -63,7 +63,7 @@
       created(){
           if(this.isA=true){
             this.$router.push({
-              path:'collection'
+              path:'businessCollection'
             })
           }else if(this.isB=true){
             this.$router.push({

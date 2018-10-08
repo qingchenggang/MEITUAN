@@ -1,13 +1,26 @@
 <template>
   <div>
-    <div class="list" v-for="(list,index) in lists" :key="index">
+    <router-link :to="{name:'meishiDetail',params:{meishiid:list.id}}" class="list" v-for="(list,index) in lists"  tag="div">
       <img :src="list.img" alt="">
       <div class="text">
         <h4>{{list.name}}</h4>
         <p>{{list.address}}</p>
-
       </div>
-    </div>
+    </router-link>
+    <router-link :to="{name:'lifeDetail',params:{lifeid:list.id}}" class="list" v-for="(list,index) in lists1"  tag="div">
+      <img :src="list.img" alt="">
+      <div class="text">
+        <h4>{{list.name}}</h4>
+        <p>{{list.address}}</p>
+      </div>
+    </router-link>
+    <router-link :to="{name:'playdetail',params:{playid:list.id}}" class="list" v-for="(list,index) in lists2"  tag="div">
+      <img :src="list.img" alt="">
+      <div class="text">
+        <h4>{{list.name}}</h4>
+        <p>{{list.address}}</p>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -16,11 +29,15 @@
         name: "business-collection",
         data(){
             return{
-              lists:[]
+              lists:[],
+              lists1:[],
+              lists2:[],
             }
         },
       created(){
-        this.lists = JSON.parse(localStorage.getItem('zhuangtai'))
+        this.lists = JSON.parse(localStorage.getItem('zhuangtai')),
+        this.lists1 = JSON.parse(localStorage.getItem('zhuangtai1')),
+        this.lists2 = JSON.parse(localStorage.getItem('zhuangtai2'))
       },
       mounted(){
 

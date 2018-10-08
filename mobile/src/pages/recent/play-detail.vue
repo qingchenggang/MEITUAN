@@ -66,17 +66,18 @@
 
   import {reqplaydetail} from "../../api";
   export default {
-    name: "meishi-detail",
+    name: "play-detail",
     data(){
       return{
         lists:[],
-
         success:false,
         fail:false,
         share_box:false,
         isB:true,
         isC:false,
-        newLists:[]
+        newLists:[],
+        localData:[],
+        dsdData:[]
       }
     },
     async mounted(){
@@ -109,47 +110,47 @@
         var start=$(".start1").html()
         ScoreInit(start); //初始化，参数是0～5的数字，代表星数，传空默认0颗星
       })
-      //  alert(this.lists)
-      /*   alert(this.newLists)
-         if(this.newLists==''){
-           this.newLists=this.lists
-         }else{
-           this.newLists=JSON.parse(localStorage.getItem("zhuangtai"));
-         }*/
+      let ha= JSON.parse(localStorage.getItem('play'))
+      //alert(ha)
+      if(ha==null){
+        this.lists=this.lists
+      }else{
+        this.lists = JSON.parse(localStorage.getItem('play'))
+        if(this.lists[this.$route.params.playid-1].kong==true){
+          this.lists[this.$route.params.playid-1].kong=true
+        }else if(this.lists[this.$route.params.playid-1].kong==false){
+          this.lists[this.$route.params.playid-1].kong=false
+        }
+      }
     },
     created(){
-
+      this.newLists = []
+      this.localData = []
     },
     methods:{
       go(){
         this.$router.back(-1)
       },
       start(state,id){
-        //  alert(id)
-        /*   this.newLists = JSON.parse(localStorage.getItem('zhuangtai'));
-            console.log(this.newLists)
-            if(this.newLists==null){
-              this.newLists=this.lists
-            }else{
-              this.newLists= this.newLists
-            }*/
-        /*   for(let i of this.newLists) {
-             if(state==true){
-               i.kong=false
-             }else if(state==false){
-               i.kong=true
-             }*/
-        //  i.kong=state
-
-        /*console.log(this.newLists)*/
-        /*alert(this.lists[id-1].name)*!/*/
+        let zhi=[];
+        this.localData = []
         if(this.lists[id-1].kong==true){
           //  alert("未收藏变收藏")
           this.success=true
           this.lists[id-1].kong=false
-          // localStorage.setItem('zhuangtai', JSON.stringify(this.lists));
-          //  localStorage.setItem('zhuangtai', JSON.stringify(this.lists[id-1].kong));
-          //  console.log(this.newLists)
+          localStorage.setItem('play', JSON.stringify(this.lists));
+          zhi=JSON.parse(localStorage.getItem('zhuangtai2'));
+          if(zhi!=null ){
+            this.localData.push(...zhi,this.lists[id-1])
+            localStorage.setItem('zhuangtai2', JSON.stringify(this.localData));
+            // console.log(this.localData)
+          }else{
+            // alert('第二个')
+            if(this.dsdData.length==0){
+              this.dsdData.push(this.lists[id-1])
+              localStorage.setItem('zhuangtai2', JSON.stringify(this.dsdData));
+            }
+          }
           setTimeout(()=>{
             this.success=false
           },1000)
@@ -157,18 +158,21 @@
           // alert("已经收藏了变取消收藏")
           this.fail=true
           this.lists[id-1].kong=true
-          //localStorage.setItem('zhuangtai', JSON.stringify(this.lists));
-          //localStorage.setItem('zhuangtai', JSON.stringify(this.lists[id-1].kong));
-          //console.log(this.newLists)
+          localStorage.setItem('play', JSON.stringify(this.lists));
+          this.newLists=JSON.parse(localStorage.getItem('zhuangtai2'));
+        //  console.log('取消之前的数组====>',this.newLists)
+          this.newLists = this.newLists.filter(item =>
+            item.id!=id
+          )
+       //   console.log('取消之后的数组====>',this.newLists)
+          localStorage.setItem('zhuangtai2', JSON.stringify(this.newLists));
+          this.newLists = []
+          this.localData = []
+         // console.log(this.newLists)
           setTimeout(()=>{
             this.fail=false
           },1000)
         }
-        // let newProducts = JSON.parse(localStorage.getItem('sd'))||this.lists;
-        //alert(state)
-        //alert(typeof(state))
-
-
       },
       share(){
         this.share_box=true

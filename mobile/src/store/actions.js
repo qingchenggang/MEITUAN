@@ -10,7 +10,7 @@ export default{
     //发生异步ajax请求
     const geohash='?id='+state.latitude+','+state.longitude
     const result=await reqaddress(geohash)
-    console.log(result)
+    //console.log(result)
     //提交一个mutation
     if(result.address.code===0){
       const address=result.address.address
@@ -21,7 +21,7 @@ export default{
     //发生异步ajax请求
 
     const result=await reqmeitodos()
-    console.log(result)
+   // console.log(result)
     //提交一个mutation
 
 

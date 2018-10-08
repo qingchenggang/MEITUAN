@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div v-show="success" class="animated bounceIn success_button">收藏成功</div>
     <div v-show="fail" class="animated bounceIn fail_button">取消收藏成功</div>
     <div  class="share_box" v-show="share_box" :class="{'fadeIn':isB,'fadeOut':isC}">
@@ -76,7 +75,8 @@
         isB:true,
         isC:false,
         newLists:[],
-        localData:[]
+        localData:[],
+        dsdData:[]
       }
     },
     async mounted(){
@@ -109,77 +109,42 @@
         var start=$(".start1").html()
         ScoreInit(start); //初始化，参数是0～5的数字，代表星数，传空默认0颗星
       })
-      /* alert(this.newLists)
-       alert(this.lists)*/
-    //  alert(this.newLists)
-      let ha= JSON.parse(localStorage.getItem('haha'))
-      //alert(ha)
+      let ha= JSON.parse(localStorage.getItem('meishi'))
       if(ha==null){
         this.lists=this.lists
       }else{
-        this.lists = JSON.parse(localStorage.getItem('haha'))
-       // alert(this.newLists[this.$route.params.meishiid-1].name)
+        this.lists = JSON.parse(localStorage.getItem('meishi'))
         if(this.lists[this.$route.params.meishiid-1].kong==true){
-        //  alert(this.newLists[this.$route.params.meishiid-1].kong)
           this.lists[this.$route.params.meishiid-1].kong=true
         }else if(this.lists[this.$route.params.meishiid-1].kong==false){
-         // alert(this.newLists[this.$route.params.meishiid-1].kong)
           this.lists[this.$route.params.meishiid-1].kong=false
         }
       }
-      /*alert(this.newLists[this.$route.params.meishiid-1].kong)
-      if(this.newLists[this.$route.params.meishiid-1].kong==true){
-        this.newLists[this.$route.params.meishiid-1].kong=false
-      }else{
-        this.newLists[this.$route.params.meishiid-1].kong=true
-      }*/
-
-
-
-    },
-    created(){
-     // alert(this.localData.length);
-      //this.newLists = JSON.parse(localStorage.getItem('zhuangtai'))
-      //alert(this.lists[].id)
     },
     methods:{
       go(){
         this.$router.back(-1)
       },
       start(state,id){
-        //  alert(id)
-        /*   this.newLists = JSON.parse(localStorage.getItem('zhuangtai'));
-            console.log(this.newLists)
-            if(this.newLists==null){
-              this.newLists=this.lists
-            }else{
-              this.newLists= this.newLists
-            }*/
-        /*   for(let i of this.newLists) {
-             if(state==true){
-               i.kong=false
-             }else if(state==false){
-               i.kong=true
-             }*/
-        //  i.kong=state
-
-        /*console.log(this.newLists)*/
-        /*alert(this.lists[id-1].name)*!/*/
-        let zhi;
+        let zhi=[];
         if(this.lists[id-1].kong==true){
           //  alert("未收藏变收藏")
-         // alert(id-1+'加入')
           this.success=true
           this.lists[id-1].kong=false
-          localStorage.setItem('haha', JSON.stringify(this.lists));
-
+          localStorage.setItem('meishi', JSON.stringify(this.lists));
           zhi=JSON.parse(localStorage.getItem('zhuangtai'));
-          if(zhi!=null){
+          if(zhi!=null ){
+         //  alert('第一个')
             this.localData.push(...zhi,this.lists[id-1])
+            localStorage.setItem('zhuangtai', JSON.stringify(this.localData));
+           // console.log(this.localData)
           }else{
-            this.localData.push(this.lists[id-1])
+          // alert('第二个')
+           if(this.dsdData.length==0){
+              this.dsdData.push(this.lists[id-1])
+              localStorage.setItem('zhuangtai', JSON.stringify(this.dsdData));
+            }
           }
-          localStorage.setItem('zhuangtai', JSON.stringify(this.localData));
           setTimeout(()=>{
             this.success=false
           },1000)
@@ -187,16 +152,16 @@
           // alert("已经收藏了变取消收藏")
           this.fail=true
           this.lists[id-1].kong=true
-          let list1=this.lists[id-1];
-          localStorage.setItem('haha', JSON.stringify(this.lists));
-          //console.log(this.lists[id-1])
-          let zhi1=JSON.parse(localStorage.getItem('zhuangtai'));
-          zhi1=zhi1.filter(item=>{
-            console.log(item.id);
+          localStorage.setItem('meishi', JSON.stringify(this.lists));
+          this.newLists=JSON.parse(localStorage.getItem('zhuangtai'));
+         // console.log('取消之前的数组====>',this.newLists)
+          this.newLists=this.newLists.filter(item=>{
             return item.id!=id
           })
-          localStorage.setItem('zhuangtai', JSON.stringify(zhi1));
-          console.log(zhi1)
+        //  console.log('取消之后的数组====>',this.newLists)
+          localStorage.setItem('zhuangtai', JSON.stringify(this.newLists));
+          this.newLists = []
+          this.localData = []
           setTimeout(()=>{
             this.fail=false
           },1000)
@@ -218,9 +183,11 @@
         alert('3')
       }
     },
+    created() {
+   //   console.log(this.dsdData)
+    },
     watch: {
       '$route'(to, from) {
-        //  console.log(to,from)
         if (to.query.id){
           this.id = to.query.id
         } else{

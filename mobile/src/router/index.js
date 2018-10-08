@@ -44,7 +44,7 @@ export default new Router({
           },
           children:[
             {
-              path: '',
+              path: '/one',
               name: 'one',
               component: one,
               meta: {
@@ -133,7 +133,7 @@ export default new Router({
       component: collection,
       children:[
         {
-          path: '',
+          path: '/businessCollection',
           name: 'businessCollection',
           component: businessCollection
         },

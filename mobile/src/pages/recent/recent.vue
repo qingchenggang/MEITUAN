@@ -53,7 +53,7 @@
         this.isD=false
         this.isF=false
         this.$router.push({
-          path:'recent?id=2',
+          path:'one?id=2',
           query: {
             haha: true
           }
@@ -88,7 +88,7 @@
 
     },
     created: function () {
-
+      this.$router.push('one?id=2')
     },
     watch: {
       '$route'(to, from) {

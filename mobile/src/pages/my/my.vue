@@ -9,7 +9,6 @@
      <div class="portrait" @click="portrait">
         <p> &#xe600;</p>
         <h4>独步颜良的大彬</h4>
-
       </div>
       <div class="first">
         <div  class="one">
@@ -59,6 +58,9 @@
               <img src="../../../static/images/my/recharge.png" alt="">
               <p>手机充值</p>
             </div>
+            <div class="start1">
+
+            </div>
           </div>
       </div>
       <h5 class="title_two">美团服务</h5>
@@ -88,17 +90,16 @@
             <img src="../../../static/images/my/about.png" alt="">
             <p>关于美团</p>
           </div>
+          <div class="start1">
+          </div>
+          <div class="start1">
+          </div>
         </div>
       </div>
-
+      <div style="height: 10%;"> </div>
     </div>
     <div>
-
     </div>
-
-
-
-
 
 	</div>
 
@@ -153,7 +154,7 @@
 }
 
   .big {
-    height: 100%;
+    height: auto;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -185,7 +186,7 @@
     display: inline-block;
     line-height: 35px;
     color: #ffffff;
-    margin-left: 265px;
+    margin-left: 70%;
     font-size: 20px;
   }
   .letter{
@@ -193,7 +194,7 @@
     display: inline-block;
     line-height: 35px;
     color: #ffffff;
-    margin-left: 20px;
+    margin-left: 5%;
     font-size: 20px;
   }
   .portrait{
@@ -240,7 +241,7 @@
     flex-direction: row;
     flex-wrap: wrap;
    /* text-align: center;*/
-    /*justify-content: space-between;*/
+    justify-content: space-between;
   }
   .start1 img{
     width: 25px;
@@ -269,7 +270,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   /* text-align: center;*/
-  /*justify-content: space-between;*/
+  justify-content: space-between;
 }
 .start1 img{
   width: 25px;
