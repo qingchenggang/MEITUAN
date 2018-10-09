@@ -1,20 +1,20 @@
 <template>
   <div>
-    <router-link :to="{name:'meishiDetail',params:{meishiid:list.id}}" class="list" v-for="(list,index) in lists"  tag="div">
+    <router-link :to="{name:'meishiDetail',params:{meishiid:list.id}}" class="list" v-for="(list,index) in lists" :key="index" tag="div">
       <img :src="list.img" alt="">
       <div class="text">
         <h4>{{list.name}}</h4>
         <p>{{list.address}}</p>
       </div>
     </router-link>
-    <router-link :to="{name:'lifeDetail',params:{lifeid:list.id}}" class="list" v-for="(list,index) in lists1"  tag="div">
+    <router-link :to="{name:'lifeDetail',params:{lifeid:list.id}}" class="list" v-for="(list,index) in lists1" :key="index" tag="div">
       <img :src="list.img" alt="">
       <div class="text">
         <h4>{{list.name}}</h4>
         <p>{{list.address}}</p>
       </div>
     </router-link>
-    <router-link :to="{name:'playdetail',params:{playid:list.id}}" class="list" v-for="(list,index) in lists2"  tag="div">
+    <router-link :to="{name:'playdetail',params:{playid:list.id}}" class="list" v-for="(list,index) in lists2" :key="index" tag="div">
       <img :src="list.img" alt="">
       <div class="text">
         <h4>{{list.name}}</h4>

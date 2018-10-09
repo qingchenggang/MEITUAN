@@ -44,7 +44,7 @@ export default new Router({
           },
           children:[
             {
-              path: '/one',
+              path: '',
               name: 'one',
               component: one,
               meta: {

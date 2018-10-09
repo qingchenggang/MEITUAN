@@ -37,7 +37,7 @@
 
 <style scoped>
 	.mu-carousel {
-		height: 150px;
+		height: 100px;
 		width: 100%;
 		position: relative;
 		overflow: hidden;
@@ -58,4 +58,21 @@
 		will-change: transform;
 		max-width: none;
 	}
+  .mu-carousel-indicators {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 28px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 3;
+  }
 </style>

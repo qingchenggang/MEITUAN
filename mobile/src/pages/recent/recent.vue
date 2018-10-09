@@ -53,7 +53,7 @@
         this.isD=false
         this.isF=false
         this.$router.push({
-          path:'one?id=2',
+          path:'recent?id=2',
           query: {
             haha: true
           }
@@ -87,19 +87,11 @@
     computed: {
 
     },
-    created: function () {
-      this.$router.push('one?id=2')
+    mounted(){
+    /*  this.$router.push('one?id=2')*/
     },
     watch: {
       '$route'(to, from) {
-       // console.log(to)
-     /* console.log(to.id)
-        console.log(from.id)*/
-    /*    if (to.query.id){
-          this.id = to.query.id
-        } else{
-          this.id = "2";
-        }*/
         /*从‘爱玩乐’跳转‘惠生活’*/
         if(to.name=='two' && from.name=='three'){
           this.$route.query.haha=false
@@ -113,7 +105,6 @@
           this.$route.query.haha=false
         }
       }
-
     }
   }
 </script>
