@@ -2,12 +2,12 @@
 	<div id="my">
     <div  class="big" style="background-image: url('../../../static/images/my/wode.png')">
      <div class="hearder1">
-        <span class="set" @click="set">&#xe608;</span>
-        <span class="artificial" @click="artificial">&#xe73b;</span>
-        <span class="letter" @click="letter">&#xe60d;</span>
+        <i class="set iconfont" @click="set">&#xe608;</i>
+        <i class="artificial iconfont" @click="artificial">&#xe73b;</i>
+        <i class="letter iconfont" @click="letter">&#xe60d;</i>
       </div>
      <div class="portrait" @click="portrait">
-        <p> &#xe600;</p>
+       <i class="iconfont massage">&#xe618;</i>
         <h4>独步颜良的大彬</h4>
       </div>
       <div class="first">
@@ -108,7 +108,7 @@
 <script>
 
   export default {
-    nme:'#my',
+    name:"my",
     data(){
       return{
 
@@ -148,11 +148,10 @@
 </script>
 
 <style scoped>
-#my{
-  height: 100%;
-  width: 100%;
-}
-
+  #my{
+    height: 100%;
+    width: 100%;
+  }
   .big {
     height: auto;
     width: 100%;
@@ -160,21 +159,14 @@
     background-size: 100% 100%;
   }
 
-  @font-face {
-    font-family: 'iconfont';  /* project id 854070 */
-    src: url('//at.alicdn.com/t/font_854070_8yij2gwhjgo.eot');
-    src: url('//at.alicdn.com/t/font_854070_8yij2gwhjgo.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_854070_8yij2gwhjgo.woff') format('woff'),
-    url('//at.alicdn.com/t/font_854070_8yij2gwhjgo.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_854070_8yij2gwhjgo.svg#iconfont') format('svg');
-  }
+
   .hearder1{
     width: 100%;
     height: 35px;
     overflow: hidden;
   }
   .set{
-    font-family: 'iconfont';
+
     display: inline-block;
     line-height: 35px;
     color: #ffffff;
@@ -182,7 +174,7 @@
     font-size: 20px;
   }
   .artificial{
-    font-family: 'iconfont';
+
     display: inline-block;
     line-height: 35px;
     color: #ffffff;
@@ -190,7 +182,7 @@
     font-size: 20px;
   }
   .letter{
-    font-family: 'iconfont';
+
     display: inline-block;
     line-height: 35px;
     color: #ffffff;
@@ -201,8 +193,8 @@
     width: 100%;
     text-align: center;
   }
-  .portrait p{
-    font-family: 'iconfont';
+  .portrait .massage{
+
     font-size: 45px;
     margin-top: 25px;
   }

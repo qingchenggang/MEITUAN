@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="life-detail">
 
     <div v-show="success" class="animated bounceIn success_button">收藏成功</div>
     <div v-show="fail" class="animated bounceIn fail_button">取消收藏成功</div>
@@ -35,6 +35,24 @@
         <p class="cancel" @click="sharePopue">取消</p>
       </div>
     </div>
+    <div class="set" v-show="xian">
+      <div class="mokuai" @click="home">
+        <i class="iconfont home" >&#xe61c;</i><span>首页</span>
+      </div>
+      <div class="mokuai" @click="serch">
+        <i class="iconfont serch" >&#xe662;</i><span>搜索</span>
+      </div>
+      <div class="mokuai" @click="order">
+        <i class="iconfont order" >&#xe60e;</i><span>我的订单</span>
+      </div>
+      <div class="mokuai" @click="collection">
+        <i class="iconfont collection" >&#xe646;</i><span>我的收藏</span>
+      </div>
+      <div class="mokuai" @click="error">
+        <i class="iconfont error" >&#xeee5;</i><span>报错</span>
+      </div>
+
+    </div>
     <div v-for="(list,index) in lists" :key="index" v-if="$route.params.lifeid==list.id">
       <div class="hearder">
         <span class="arrow" @click="go">&#xe629;</span>
@@ -50,7 +68,7 @@
           <span class="countDown">&#xe65c;</span><span class="close">{{list.time}}</span><span class="popularity">{{list.popularity}}</span>
         </div>
         <div class="right">
-          <img :src="list.img" alt="">
+          <img v-image-preview :src="list.img" alt="">
         </div>
         <div class="address1">
           <span class="address">&#xe64e;</span>
@@ -77,7 +95,8 @@
         isC:false,
         newLists:[],
         localData:[],
-        dsdData:[]
+        dsdData:[],
+        xian:false
       }
     },
     async mounted(){
@@ -131,6 +150,7 @@
         this.$router.back(-1)
       },
       start(state,id){
+        this.xian=false
         let zhi=[];
         this.localData = []
         if(this.lists[id-1].kong==true){
@@ -177,6 +197,7 @@
         this.share_box=true
         this.isB=true
         this.isC=false
+        this.xian=false
       },
       sharePopue(){
         this.isB=false
@@ -186,7 +207,22 @@
         },250)
       },
       dian(){
-        alert('3')
+        this.xian=!this.xian
+      },
+      home(){
+        this.$router.push('/home?id=1')
+      },
+      serch(){
+        this.$router.push('/home?id=1')
+      },
+      order(){
+        this.$router.push('/order?id=3')
+      },
+      collection(){
+        this.$router.push('/collection')
+      },
+      error(){
+        this.$router.push('/home?id=1')
       }
     },
     created() {
@@ -406,5 +442,30 @@
     border-top:1px solid gainsboro ;
     height: 35.5px;
     line-height: 35.5px;
+  }
+  .set{
+    width: 40%;
+    height: 184px;
+    background-color: rgba(0,0,0,.8);
+    position: absolute;
+    right: 0;
+    top: 40px;
+    border-radius: 5px;
+    color: #cbccce;
+    font-size: 15px;
+  }
+  .mokuai{
+    width: 120px;
+    height: 35px;
+    border-bottom: 1px solid #cbccce;
+    margin-left: 15px;
+    margin-top: 2px;
+  }
+  .mokuai span:nth-child(2){
+    margin-left: 15px;
+  }
+  .iconfont {
+    font-family:"iconfont" !important;
+    font-size:20px;
   }
 </style>

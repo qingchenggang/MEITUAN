@@ -41,7 +41,7 @@
 		width: 100%;
 		position: relative;
 		overflow: hidden;
-    margin-top: 63px;
+    margin-top: 60px;
 	}
 
 	.mu-carousel-item>img {

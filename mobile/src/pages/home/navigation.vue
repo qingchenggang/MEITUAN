@@ -11,7 +11,6 @@
 		</div>
 	</div>
 </template>
-
 <script>
 
   import {mapState} from 'vuex'
@@ -54,9 +53,9 @@
 
 	.header {
     width: 100%;
-    height: 63px;
+    height: 80px;
     border: 0.001px solid lightyellow;
-    background-color: gold;
+    background-color: #ffffff;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -96,7 +95,7 @@
     float: left;
     margin-top: 10px;
     margin-left: 10px;
-    background-color: white;
+    background-color: #f4f4f4;
     border-radius: 20px;
     /*border: 1px solid green;*/
   }
@@ -106,6 +105,7 @@
 		margin-left: 4px;
 		border-radius: 20px;
 		border: 0;
+    background-color: #f4f4f4;
 		/*border: 1px solid red;*/
 	}
 
@@ -123,4 +123,5 @@
 		line-height: 63px;
 		margin-left: 10px;
 	}
+
 </style>

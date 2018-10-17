@@ -1,5 +1,5 @@
 <template>
-	<div class="hello">
+	<div id="recent">
     <addresstTop></addresstTop>
     <div class="box">
       <div @click="one" :class="{'isColor1':isB}">
@@ -28,6 +28,7 @@
   import addresstTop from './address-top'
 
 	export default {
+    name:'recent',
     data() {
       return {
         id: "2",

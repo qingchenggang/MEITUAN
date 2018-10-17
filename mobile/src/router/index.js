@@ -32,7 +32,7 @@ export default new Router({
 					name: 'home',
 					component: home,
           meta: {
-            keepAlive: false // 需要被缓存
+            keepAlive: true // 需要被缓存
           }
 				},
 				{
@@ -98,24 +98,16 @@ export default new Router({
       path: '/meishiDetail/:meishiid',
       name: 'meishiDetail',
       component: meishiDetail
-
-
     },
     {
       path: '/lifeDetail/:lifeid',
       name: 'lifeDetail',
-      component: lifeDetail,
-      meta: {
-        keepAlive: true // 需要被缓存
-      }
+      component: lifeDetail
     },
     {
       path: '/playdetail/:playid',
       name: 'playdetail',
-      component: playdetail,
-      meta: {
-        keepAlive: true // 需要被缓存
-      }
+      component: playdetail
     },
 		{
 			path: '/login',

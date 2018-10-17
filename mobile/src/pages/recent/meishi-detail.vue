@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="meishi-detail">
     <div v-show="success" class="animated bounceIn success_button">收藏成功</div>
     <div v-show="fail" class="animated bounceIn fail_button">取消收藏成功</div>
     <div  class="share_box" v-show="share_box" :class="{'fadeIn':isB,'fadeOut':isC}">
@@ -34,25 +34,43 @@
         <p class="cancel" @click="sharePopue">取消</p>
       </div>
     </div>
+    <div class="set" v-show="xian">
+      <div class="mokuai" @click="home">
+        <i class="iconfont home" >&#xe61c;</i><span>首页</span>
+      </div>
+      <div class="mokuai" @click="serch">
+        <i class="iconfont serch" >&#xe662;</i><span>搜索</span>
+      </div>
+      <div class="mokuai" @click="order">
+        <i class="iconfont order" >&#xe60e;</i><span>我的订单</span>
+      </div>
+      <div class="mokuai" @click="collection">
+        <i class="iconfont collection" >&#xe646;</i><span>我的收藏</span>
+      </div>
+      <div class="mokuai" @click="error">
+        <i class="iconfont error" >&#xeee5;</i><span>报错</span>
+      </div>
+
+    </div>
     <div v-for="(list,index) in lists" :key="index" v-if="$route.params.meishiid==list.id">
       <div class="hearder">
-        <span class="arrow" @click="go">&#xe629;</span>
-        <span class="start" @click="start(list.kong,list.id)" v-if="list.kong==true">&#xe646;</span>
-        <span class="start" @click="start(list.kong,list.id)" v-else-if="list.kong==false">&#x24b7a;</span>
-        <span class="share" @click="share">&#xe619;</span>
-        <span class="dian" @click="dian">&#xe637;</span>
+        <i class="arrow iconfont" @click="go">&#xe629;</i>
+        <i class="start iconfont" @click="start(list.kong,list.id)" v-if="list.kong==true">&#xe646;</i>
+        <i class="start iconfont" @click="start(list.kong,list.id)" v-else-if="list.kong==false">&#x24b7a;</i>
+        <i class="share iconfont" @click="share">&#xe619;</i>
+        <i class="dian iconfont" @click="dian">&#xe637;</i>
       </div>
       <div class="detail">
         <div class="left">
           <h4>{{list.name}}</h4>
           <span class="score_wrapper"></span> <span class="start2"><span class="start1">{{list.start}}</span>分</span><span class="money">|<span>{{list.money}}</span> </span><br>
-          <span class="countDown">&#xe65c;</span><span class="close">{{list.time}}</span><span class="popularity">{{list.popularity}}</span>
+          <i class="countDown iconfont">&#xe65c;</i><span class="close">{{list.time}}</span><span class="popularity">{{list.popularity}}</span>
         </div>
         <div class="right">
-          <img :src="list.img" alt="">
+          <img v-image-preview :src="list.img" alt="">
         </div>
         <div class="address1">
-          <span class="address">&#xe64e;</span>
+          <i class="address iconfont">&#xe64e;</i>
           <div>{{list.address}}</div>
         </div>
       </div>
@@ -60,7 +78,7 @@
     </div>
   </div>
 </template>
-
+<script type="text/javascript" src="../..//jquery.cookie.js"></script>
 <script>
 
   import {reqmeishidetail} from "../../api";
@@ -76,7 +94,8 @@
         isC:false,
         newLists:[],
         localData:[],
-        dsdData:[]
+        dsdData:[],
+        xian:false
       }
     },
     async mounted(){
@@ -126,6 +145,7 @@
         this.$router.back(-1)
       },
       start(state,id){
+        this.xian=false
         let zhi=[];
         if(this.lists[id-1].kong==true){
           //  alert("未收藏变收藏")
@@ -171,6 +191,7 @@
         this.share_box=true
         this.isB=true
         this.isC=false
+        this.xian=false
       },
       sharePopue(){
         this.isB=false
@@ -180,7 +201,22 @@
         },250)
       },
       dian(){
-        alert('3')
+        this.xian=!this.xian
+      },
+      home(){
+        this.$router.push('/home?id=1')
+      },
+      serch(){
+        this.$router.push('/home?id=1')
+      },
+      order(){
+        this.$router.push('/order?id=3')
+      },
+      collection(){
+        this.$router.push('/collection')
+      },
+      error(){
+        this.$router.push('/home?id=1')
       }
     },
     created() {
@@ -215,16 +251,8 @@
     font-size: 13.5px;
     color: #949c93;
   }
-  @font-face {
-    font-family: 'iconfont';  /* project id 836071 */
-    src: url('//at.alicdn.com/t/font_836071_q1vyv6osear.eot');
-    src: url('//at.alicdn.com/t/font_836071_q1vyv6osear.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_836071_q1vyv6osear.woff') format('woff'),
-    url('//at.alicdn.com/t/font_836071_q1vyv6osear.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_836071_q1vyv6osear.svg#iconfont') format('svg');
-  }
   .arrow{
-    font-family: 'iconfont';
+
     display: inline-block;
     line-height: 35px;
     color:#24b7ab;
@@ -232,7 +260,7 @@
     font-size: 20px;
   }
   .start{
-    font-family: 'iconfont';
+
     display: inline-block;
     line-height: 35px;
     color:#24b7ab;
@@ -240,7 +268,7 @@
     font-size: 20px;
   }
   .share{
-    font-family: 'iconfont';
+
     display: inline-block;
     line-height: 35px;
     color:#24b7ab;
@@ -248,7 +276,7 @@
     font-size: 20px;
   }
   .dian{
-    font-family: 'iconfont';
+
     display: inline-block;
     line-height: 35px;
     color:#24b7ab;
@@ -281,7 +309,7 @@
     margin-left: 8px;
   }
   .countDown{
-    font-family: 'iconfont';
+
     color: #ed8423;
     margin-left: 13px;
     font-size: 13.5px;
@@ -304,7 +332,7 @@
 
   }
   .address{
-    font-family: 'iconfont';
+
     margin-left: 13px;
     float: left;
     margin-top: 5px;
@@ -316,7 +344,6 @@
     margin-left: 5px;
     margin-top: 5px;
   }
-
   .success_button{
     width: 120px;
     height: 50px;
@@ -331,7 +358,6 @@
     color: white;
     border-radius:5px ;
   }
-
   .fail_button{
     width: 120px;
     height: 50px;
@@ -398,4 +424,30 @@
     height: 35.5px;
     line-height: 35.5px;
   }
+  .set{
+    width: 40%;
+    height: 184px;
+    background-color: rgba(0,0,0,.8);
+    position: absolute;
+    right: 0;
+    top: 40px;
+    border-radius: 5px;
+    color: #cbccce;
+    font-size: 15px;
+  }
+  .mokuai{
+    width: 120px;
+    height: 35px;
+    border-bottom: 1px solid #cbccce;
+    margin-left: 15px;
+    margin-top: 2px;
+  }
+  .mokuai span:nth-child(2){
+    margin-left: 15px;
+  }
+  .iconfont {
+    font-family:"iconfont" !important;
+    font-size:20px;
+  }
+
 </style>

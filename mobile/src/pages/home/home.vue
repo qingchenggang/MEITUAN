@@ -1,5 +1,8 @@
 <template>
-	<div>
+	<div id="home">
+    <!--<div :class="{'start':isA,'end':isB}" >
+      dsdad
+    </div>-->
 		<navigation></navigation>
 		<broadcast></broadcast>
 		<middle></middle>
@@ -13,9 +16,11 @@
 	import middle from './middle'
 
 	export default {
+	  name:'home',
 		data() {
 			return {
-
+        isA:true,
+        isB:false
 			}
 		},
 		components: {
@@ -23,20 +28,37 @@
 			broadcast,
 			middle
 		},
-	/*		beforeRouteLeave(to, from, next) {
-				let position = window.scrollY //记录离开页面的位置
-
-				if(position == null) position = 0
-				this.$store.commit('changeRecruitScrollY', position) //离开路由时把位置存起来
-				next()
-				//alert(position + '--离开首页')
-		},*/
 		watch: {
 
-		}
-	}
+		},
+    mounted(){
+      window.addEventListener('scroll',this.handleScroll,true)
+    },
+    methods:{
+      handleScroll(e){
+      //  console.log(e.target.scrollTop)
+        if(e.target.scrollTop>100){
+           /* this.isA=false
+            this.isB=true*/
+       /*   alert('100啦')*/
+        }else{
+         /* this.isA=true
+          this.isB=false*/
+        }
+      }
+    }
+  }
 </script>
 
-<style>
-
+<style scoped>
+  broadcast{
+    overflow: hidden;
+  }
+  .start{
+    margin-left: 60px;
+    margin-top: 300px;
+  }
+  .end{
+    margin-left: 0px;
+  }
 </style>

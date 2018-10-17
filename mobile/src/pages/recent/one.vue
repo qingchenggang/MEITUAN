@@ -39,7 +39,7 @@
         if (to.query.id){
             this.id = to.query.id
           } else{
-            this.id = "1";
+            this.id = 1;
           }
         }
       }

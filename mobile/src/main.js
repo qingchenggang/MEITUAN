@@ -15,13 +15,17 @@ import $ from 'jquery'
 import store from './store';
 import VueLazyLoad from 'vue-lazyload' //图片懒加载
 
+import './style.css'
+import VueDirectiveImagePreviewer from 'vue-directive-image-previewer'
+import 'vue-directive-image-previewer/dist/assets/style.css'
 
 Vue.config.productionTip = false
 Vue.use(MuseUI);
 Vue.use(Vant);
 Vue.use(Mint);
 Vue.use(Vuex);
-Vue.use(animate)
+Vue.use(animate);
+Vue.use(VueDirectiveImagePreviewer);
 Vue.use(VueLazyLoad, {
 	preLoad: 1.3,
 	error: 'http://img1.imgtn.bdimg.com/it/u=1160684446,1076555601&fm=26&gp=0.jpg',

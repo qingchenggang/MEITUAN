@@ -1,69 +1,84 @@
 <template>
-  <div>
+    <div id="play-detail" @click="playDetail">
+      <div v-show="success" class="animated bounceIn success_button">收藏成功</div>
+      <div v-show="fail" class="animated bounceIn fail_button">取消收藏成功</div>
+      <div  class="share_box" v-show="share_box" :class="{'fadeIn':isB,'fadeOut':isC}">
+        <div class="animated share_tan":class="{'fadeInUp':isB,'fadeOutDown':isC}">
+          <p class="shareto">分享到</p>
+          <div class="footer-box">
+            <div>
+              <img src="../../../static/images/meishi_detail/weixin.png" alt="">
+              <p>微信好友</p>
+            </div>
+            <div>
+              <img src="../../../static/images/meishi_detail/pengyouqun.png" alt="">
+              <p>朋友圈</p>
+            </div>
+            <div>
+              <img src="../../../static/images/meishi_detail/qq.png" alt="">
+              <p>QQ好友</p>
+            </div>
+            <div>
+              <img src="../../../static/images/meishi_detail/kongjian.png" alt="">
+              <p>QQ空间</p>
+            </div>
+            <div>
+              <img src="../../../static/images/meishi_detail/weibo.png" alt="">
+              <p>微博</p>
+            </div>
+            <div>
+              <img src="../../../static/images/meishi_detail/copy.png" alt="">
+              <p>复制</p>
+            </div>
+          </div>
+          <p class="cancel" @click="sharePopue">取消</p>
+        </div>
+      </div>
+      <div class="set" v-show="xian">
+        <div class="mokuai" @click="home">
+          <i class="iconfont home" >&#xe61c;</i><span>首页</span>
+        </div>
+        <div class="mokuai" @click="serch">
+          <i class="iconfont serch" >&#xe662;</i><span>搜索</span>
+        </div>
+        <div class="mokuai" @click="order">
+          <i class="iconfont order" >&#xe60e;</i><span>我的订单</span>
+        </div>
+        <div class="mokuai" @click="collection">
+          <i class="iconfont collection" >&#xe646;</i><span>我的收藏</span>
+        </div>
+        <div class="mokuai" @click="error">
+          <i class="iconfont error" >&#xeee5;</i><span>报错</span>
+        </div>
 
-    <div v-show="success" class="animated bounceIn success_button">收藏成功</div>
-    <div v-show="fail" class="animated bounceIn fail_button">取消收藏成功</div>
-    <div  class="share_box" v-show="share_box" :class="{'fadeIn':isB,'fadeOut':isC}">
-      <div class="animated share_tan":class="{'fadeInUp':isB,'fadeOutDown':isC}">
-        <p class="shareto">分享到</p>
-        <div class="footer-box">
-          <div>
-            <img src="../../../static/images/meishi_detail/weixin.png" alt="">
-            <p>微信好友</p>
+      </div>
+      <div v-for="(list,index) in lists" :key="index" v-if="$route.params.playid==list.id">
+        <div class="hearder">
+          <span class="arrow" @click="go">&#xe629;</span>
+          <span class="start" @click="start(list.kong,list.id)" v-if="list.kong==true">&#xe646;</span>
+          <span class="start" @click="start(list.kong,list.id)" v-else-if="list.kong==false">&#x24b7a;</span>
+          <span class="share" @click="share">&#xe619;</span>
+          <span class="dian" @click="dian">&#xe637;</span>
+        </div>
+        <div class="detail">
+          <div class="left">
+            <h4>{{list.name}}</h4>
+            <span class="score_wrapper"></span> <span class="start2"><span class="start1">{{list.start}}</span>分</span><span class="money">|<span>{{list.money}}</span> </span><br>
+            <span class="countDown">&#xe65c;</span><span class="close">{{list.time}}</span><span class="popularity">{{list.popularity}}</span>
           </div>
-          <div>
-            <img src="../../../static/images/meishi_detail/pengyouqun.png" alt="">
-            <p>朋友圈</p>
+          <div class="right">
+            <img v-image-preview :src="list.img" alt="">
           </div>
-          <div>
-            <img src="../../../static/images/meishi_detail/qq.png" alt="">
-            <p>QQ好友</p>
-          </div>
-          <div>
-            <img src="../../../static/images/meishi_detail/kongjian.png" alt="">
-            <p>QQ空间</p>
-          </div>
-          <div>
-            <img src="../../../static/images/meishi_detail/weibo.png" alt="">
-            <p>微博</p>
-          </div>
-          <div>
-            <img src="../../../static/images/meishi_detail/copy.png" alt="">
-            <p>复制</p>
+          <div class="address1">
+            <span class="address">&#xe64e;</span>
+            <div>{{list.address}}</div>
           </div>
         </div>
-        <p class="cancel" @click="sharePopue">取消</p>
+
       </div>
     </div>
-    <div v-for="(list,index) in lists" :key="index" v-if="$route.params.playid==list.id">
-      <div class="hearder">
-        <span class="arrow" @click="go">&#xe629;</span>
-        <span class="start" @click="start(list.kong,list.id)" v-if="list.kong==true">&#xe646;</span>
-        <span class="start" @click="start(list.kong,list.id)" v-else-if="list.kong==false">&#x24b7a;</span>
-        <span class="share" @click="share">&#xe619;</span>
-        <span class="dian" @click="dian">&#xe637;</span>
-      </div>
-      <div class="detail">
-        <div class="left">
-          <h4>{{list.name}}</h4>
-          <span class="score_wrapper"></span> <span class="start2"><span class="start1">{{list.start}}</span>分</span><span class="money">|<span>{{list.money}}</span> </span><br>
-          <span class="countDown">&#xe65c;</span><span class="close">{{list.time}}</span><span class="popularity">{{list.popularity}}</span>
-        </div>
-        <div class="right">
-          <img :src="list.img" alt="">
-        </div>
-        <div class="address1">
-          <span class="address">&#xe64e;</span>
-          <div>{{list.address}}</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </template>
-
 <script>
-
   import {reqplaydetail} from "../../api";
   export default {
     name: "play-detail",
@@ -77,7 +92,8 @@
         isC:false,
         newLists:[],
         localData:[],
-        dsdData:[]
+        dsdData:[],
+        xian:false
       }
     },
     async mounted(){
@@ -128,10 +144,16 @@
       this.localData = []
     },
     methods:{
+      playDetail(){
+
+
+
+      },
       go(){
         this.$router.back(-1)
       },
       start(state,id){
+        this.xian=false
         let zhi=[];
         this.localData = []
         if(this.lists[id-1].kong==true){
@@ -143,7 +165,7 @@
           if(zhi!=null ){
             this.localData.push(...zhi,this.lists[id-1])
             localStorage.setItem('zhuangtai2', JSON.stringify(this.localData));
-            // console.log(this.localData)
+             console.log(this.localData)
           }else{
             // alert('第二个')
             if(this.dsdData.length==0){
@@ -164,7 +186,7 @@
           this.newLists = this.newLists.filter(item =>
             item.id!=id
           )
-       //   console.log('取消之后的数组====>',this.newLists)
+          console.log('取消之后的数组====>',this.newLists)
           localStorage.setItem('zhuangtai2', JSON.stringify(this.newLists));
           this.newLists = []
           this.localData = []
@@ -178,6 +200,7 @@
         this.share_box=true
         this.isB=true
         this.isC=false
+        this.xian=false
       },
       sharePopue(){
         this.isB=false
@@ -187,7 +210,22 @@
         },250)
       },
       dian(){
-        alert('3')
+        this.xian=!this.xian
+      },
+      home(){
+        this.$router.push('/home?id=1')
+      },
+      serch(){
+        this.$router.push('/home?id=1')
+      },
+      order(){
+        this.$router.push('/order?id=3')
+      },
+      collection(){
+        this.$router.push('/collection')
+      },
+      error(){
+        this.$router.push('/home?id=1')
       }
     },
     watch: {
@@ -402,5 +440,30 @@
     border-top:1px solid gainsboro ;
     height: 35.5px;
     line-height: 35.5px;
+  }
+  .set{
+    width: 40%;
+    height: 184px;
+    background-color: rgba(0,0,0,.8);
+    position: absolute;
+    right: 0;
+    top: 40px;
+    border-radius: 5px;
+    color: #cbccce;
+    font-size: 15px;
+  }
+  .mokuai{
+    width: 120px;
+    height: 35px;
+    border-bottom: 1px solid #cbccce;
+    margin-left: 15px;
+    margin-top: 2px;
+  }
+  .mokuai span:nth-child(2){
+    margin-left: 15px;
+  }
+  .iconfont {
+    font-family:"iconfont" !important;
+    font-size:20px;
   }
 </style>
