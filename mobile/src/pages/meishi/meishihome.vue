@@ -1,13 +1,10 @@
 <template>
 	<div id="home">
-    <!--<div :class="{'start':isA,'end':isB}" >
-      dsdad
-    </div>-->
 		<navigation></navigation>
 		<broadcast></broadcast>
 		<middle></middle>
     <last></last>
-		<div style="margin-bottom: 56px;"> </div>
+		<!--<div style="margin-bottom: 56px;"> </div>-->
 	</div>
 </template>
 

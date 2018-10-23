@@ -2,37 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56521487-3cc4-4d45-bd8a-c932ab32829e" name="默认" comment="">
-      <change afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/src/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/src/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/static/images/home/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/static/images/home/four.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/static/images/home/one.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/static/images/home/three.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/static/images/home/two.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobile/src/pages/home/last.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/config/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/home/broadcast.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/home/broadcast.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/src/pages/home/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/home/home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/src/pages/home/middle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/home/middle.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/src/pages/home/navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/home/navigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/main.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/src/pages/my/business-collection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/my/business-collection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/my/my.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/my/my.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/life-detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/life-detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/meishi-detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/meishi-detail.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/one.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/one.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/play-detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/play-detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/recent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/recent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/three.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/three.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/two.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/two.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,130 +26,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="meishi-detail.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/meishi-detail.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="83" column="44" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
-              <folding>
-                <element signature="n#div#2;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#0;n#div#4;n#div#0;n#template#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="life-detail.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/life-detail.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="55" column="88" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="88" />
-              <folding>
-                <element signature="n#div#2;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#template#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/pages/main.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="business-collection.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/pages/my/business-collection.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="114" selection-start-line="2" selection-start-column="114" selection-end-line="2" selection-end-column="114" />
-              <folding>
-                <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#router-link#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#router-link#1;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#router-link#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#router-link#2;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#router-link#2;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recent.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/recent.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2316">
-              <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mobile/src/pages/home/home.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collection.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/pages/my/collection.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
-              <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="play-detail.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/play-detail.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
-              <folding>
-                <element signature="n#div#2;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#template#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#140#161#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="CSS File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -197,12 +61,8 @@
         <option value="$PROJECT_DIR$/mobile/src/pages/my/collection.vue" />
         <option value="$PROJECT_DIR$/mobile/src/store/actions.js" />
         <option value="$PROJECT_DIR$/mobile/src/pages/home/broadcast.vue" />
-        <option value="$PROJECT_DIR$/mobile/src/pages/home/navigation.vue" />
         <option value="$PROJECT_DIR$/mobile/src/pages/recent/3.vue" />
-        <option value="$PROJECT_DIR$/mobile/src/pages/home/home.vue" />
         <option value="$PROJECT_DIR$/mobile/src/pages/recent/recent.vue" />
-        <option value="$PROJECT_DIR$/mobile/src/pages/recent/one.vue" />
-        <option value="$PROJECT_DIR$/mobile/src/pages/home/middle.vue" />
         <option value="$PROJECT_DIR$/mobile/index.html" />
         <option value="$PROJECT_DIR$/mobile/src/icon/iconfont.css" />
         <option value="$PROJECT_DIR$/mobile/src/style.css" />
@@ -214,6 +74,17 @@
         <option value="$PROJECT_DIR$/mobile/src/pages/recent/play-detail.vue" />
         <option value="$PROJECT_DIR$/mobile/src/pages/recent/meishi-detail.vue" />
         <option value="$PROJECT_DIR$/mobile/src/pages/main.vue" />
+        <option value="$PROJECT_DIR$/mobile/src/pages/home/middle.vue" />
+        <option value="$PROJECT_DIR$/mobile/src/pages/home/footer.vue" />
+        <option value="$PROJECT_DIR$/mobile/src/pages/home/home.vue" />
+        <option value="$PROJECT_DIR$/mobile/src/api/index.js" />
+        <option value="$PROJECT_DIR$/mobile/src/pages/home/last.vue" />
+        <option value="$PROJECT_DIR$/mobile/src/pages/recent/two.vue" />
+        <option value="$PROJECT_DIR$/mobile/src/pages/recent/three.vue" />
+        <option value="$PROJECT_DIR$/mobile/src/pages/recent/one.vue" />
+        <option value="$PROJECT_DIR$/mobile/src/pages/home/navigation.vue" />
+        <option value="$PROJECT_DIR$/mobile/package.json" />
+        <option value="$PROJECT_DIR$/mobile/config/index.js" />
         <option value="$PROJECT_DIR$/mobile/src/pages/my/business-collection.vue" />
       </list>
     </option>
@@ -236,9 +107,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="20" />
-    <option name="y" value="-35" />
+    <option name="y" value="-15" />
     <option name="width" value="1940" />
-    <option name="height" value="1105" />
+    <option name="height" value="1104" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -246,7 +117,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -280,42 +150,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MEITUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEITUAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="MEITUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEITUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEITUAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="MEITUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="my" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MEITUAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MEITUAN" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="MEITUAN" type="462c0819:PsiDirectoryNode" />
-              <item name="mobile" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="recent" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mobile" />
+    <property name="last_opened_file_path" value="D:/积分" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -368,12 +212,16 @@
       <workItem from="1539310502387" duration="19329000" />
       <workItem from="1539567353535" duration="2135000" />
       <workItem from="1539653586783" duration="2158000" />
-      <workItem from="1539740069573" duration="1477000" />
+      <workItem from="1539740069573" duration="7523000" />
+      <workItem from="1539825615422" duration="11037000" />
+      <workItem from="1540171842141" duration="3252000" />
+      <workItem from="1540197049691" duration="248000" />
+      <workItem from="1540200047339" duration="607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127850000" />
+    <option name="totallyTimeSpent" value="149040000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
@@ -387,7 +235,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32952926" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.20684735" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -451,54 +299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2460">
           <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/my/collection.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/meishi-detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3390">
-          <caret line="113" column="42" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/recent.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="70" column="24" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/my/business-collection.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/one.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="57" selection-start-line="57" selection-end-line="91" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -562,9 +362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/three.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/store/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -572,31 +369,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/home/broadcast.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/3.vue" />
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/home/navigation.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/two.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/one.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/assets/iconfont/iconfont.css" />
     <entry file="file://$PROJECT_DIR$/mobile/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -619,34 +392,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/home/middle.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/order.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/pages/my/content-collection.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
-          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -661,29 +410,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#template#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/jquery.cookie.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/meishi-detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="83" column="44" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#div#0;n#template#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/style.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -696,10 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#140#161#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -721,38 +448,128 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="55" column="88" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="88" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#template#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/my/business-collection.vue">
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/home/broadcast.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="114" selection-start-line="2" selection-start-column="114" selection-end-line="2" selection-end-column="114" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#router-link#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#router-link#1;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#router-link#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#router-link#2;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#router-link#2;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/recent.vue">
+    <entry file="file://$PROJECT_DIR$/mobile/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2316">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        <state relative-caret-position="-270">
+          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/pages/home/home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="540">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/home/middle.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="79" column="42" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/recent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/meishi-detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="102" column="25" selection-start-line="101" selection-start-column="5" selection-end-line="102" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/two.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/three.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/build/webpack.base.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2430" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/build/webpack.dev.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2520" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/home/navigation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/home/last.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/my/business-collection.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3450">
+          <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/order.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/pages/recent/one.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
         </state>
       </provider>
     </entry>

@@ -23,3 +23,7 @@ export const reqmeishidetail=()=>ajax(BASE_URL+'/meishidetail')
 export const reqlifedetail=()=>ajax(BASE_URL+'/lifedetail')
 //10.获取附近页面中爱运动的商家详细的数据值
 export const reqplaydetail=()=>ajax(BASE_URL+'/playdetail')
+//11.首页猜你喜欢数据
+export const reqguess=()=>ajax(BASE_URL+'/guess')
+//12.首页猜你喜欢详情数据
+export const reqguessdetail=()=>ajax(BASE_URL+'/guessdetail')

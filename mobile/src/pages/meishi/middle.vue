@@ -3,20 +3,20 @@
     <div class="first">
       <div class="one">
         <div>
-          <i class="iconfont food" @click="food">&#xe602;</i>
-          <p>美食</p>
+          <i class="iconfont food">&#xe6a4;</i>
+          <p>优惠团购</p>
         </div>
         <div>
-          <i class="iconfont movie" @click="movie">&#xe601;</i>
-          <p>电影/演出</p>
+          <i class="iconfont movie">&#xe645;</i>
+          <p>附近好券</p>
         </div>
         <div>
-          <i class="iconfont hotel">&#xe67a;</i>
-          <p>酒店/住宿</p>
+          <i class="iconfont hotel">&#xe625;</i>
+          <p>预约订座</p>
         </div>
         <div>
-          <i class="iconfont play">&#xe604;</i>
-          <p>休闲娱乐</p>
+          <i class="iconfont play">&#xe67b;</i>
+          <p>新店特惠</p>
         </div>
         <div>
           <i class="iconfont take">&#xe809;</i>
@@ -25,58 +25,56 @@
       </div>
       <div class="two">
         <div>
-          <i class="iconfont ktv">&#xe633;</i>
-          <p>ktv</p>
+          <i class="iconfont ktv">&#xe644;</i>
+          <p>下午茶</p>
         </div>
         <div>
-          <i class="iconfont apartment">&#xe60b;</i>
-          <p>名宿/公寓</p>
+          <i class="iconfont apartment">&#xe61b;</i>
+          <p>1元拼团</p>
         </div>
         <div>
-          <i class="iconfont travel">&#xe659;</i>
-          <p>周边游旅游</p>
+          <i class="iconfont travel">&#xe60a;</i>
+          <p>工作餐</p>
         </div>
         <div>
-          <i class="iconfont plane">&#xe616;</i>
-          <p>机票火车票</p>
+          <i class="iconfont plane">&#xe640;</i>
+          <p>火锅</p>
         </div>
         <div>
-          <i class="iconfont massage">&#xe609;</i>
-          <p>按摩/足疗</p>
+          <i class="iconfont massage">&#xe649;</i>
+          <p>小吃快餐</p>
         </div>
       </div>
       <div class="three">
         <div>
-          <i class="iconfont scenic">&#xe62a;</i>
-          <p>景点/门票</p>
+          <i class="iconfont scenic">&#xe60c;</i>
+          <p>自助餐</p>
         </div>
         <div>
-          <i class="iconfont hair ">&#xe600;</i>
-          <p>丽人/美发</p>
+          <i class="iconfont hair ">&#xe624;</i>
+          <p>川湘菜</p>
         </div>
         <div>
-          <i class="iconfont flashover">&#xe606;</i>
-          <p>闪购超市</p>
+          <i class="iconfont flashover">&#xe658;</i>
+          <p>西餐</p>
         </div>
         <div>
-          <i class="iconfont fashion">&#xe607;</i>
-          <p>时尚购</p>
+          <i class="iconfont fashion">&#xe671;</i>
+          <p>江浙菜</p>
         </div>
         <div>
-          <i class="iconfont all">&#xe605;</i>
-          <p>全部分类</p>
+          <i class="iconfont all">&#xe6c5;</i>
+          <p>排行榜</p>
         </div>
       </div>
     </div>
     <div class="second">
         <div>
-          <img src="../../../static/images/home/one.png" alt="">
-          <img src="../../../static/images/home/two.png" alt="">
-          <img src="../../../static/images/home/three.png" alt="">
-          <img src="../../../static/images/home/four.png" alt="">
+          <img src="../../../static/images/5.jpg" alt="">
+          <img src="../../../static/images/6.jpg" alt="">
         </div>
     </div>
-    <img class="banner" src="../../../static/images/home/banner.png" alt="">
+
   <!--  <div style="height: 56px;"> </div>-->
   </div>
 
@@ -90,14 +88,6 @@
 				lists:[]
 			}
 		},
-    methods:{
-      food(){
-        this.$router.push('/meishihome')
-      },
-      movie(){
-        this.$router.push('/moviehome')
-      }
-    }
 
 
   }
@@ -130,19 +120,19 @@
   }
 
   .food{
-    color: #ff7e2a;
+    color: #fe816f;
     font-size: 3rem;
   }
   .movie{
-    color: #f74940;
+    color: #ff7934;
     font-size: 3rem;
   }
   .hotel{
-    color: #915634;
+    color: #a2d751;
     font-size: 3rem;
    }
   .play{
-    color: #00ba9b;
+    color: #ff7f6f;
     font-size: 3rem;
   }
   .take{
@@ -162,23 +152,23 @@
     font-size: 12.5px;
   }
   .ktv{
-    color: #15c5b0;
+    color: #ffab34;
     font-size: 2rem;
   }
   .apartment{
-    color: #febd3d;
+    color: #ffab34;
     font-size: 2rem;
   }
   .travel{
-    color: #34a9ff;
+    color: #ffab34;
     font-size: 2rem;
   }
   .plane{
-    color: #33a4ff;
+    color: #ffab34;
     font-size: 2rem;
   }
   .massage{
-    color: #1ed4bb;
+    color: #ffab34;
     font-size: 2rem;
   }
   .three{
@@ -194,37 +184,37 @@
     font-size: 12.5px;
   }
   .scenic{
-    color: #53aefd;
+    color: #ffab34;
     font-size: 2rem;
   }
   .hair{
-    color: #df7f8b;
+    color: #ffab34;
     font-size: 2rem;
   }
   .flashover{
-    color: #ffbd00;
+    color: #ffab34;
     font-size: 2rem;
   }
   .fashion{
-    color: #976bf4;
+    color: #ffab34;
     font-size: 2rem;
   }
   .all{
-    color: #976bf4;
+    color: #ffab34;
     font-size: 2rem;
   }
   .second{
     width: 100%;
-    height: 240px;
+
     background-color: white;
-    margin-top: 10px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
   .second div{
     width: 94%;
-    height: 220px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

@@ -45,22 +45,24 @@
     animation-duration:.2s;
   }
   .box{
-    width: 100%;
+    width: 92%;
     height: 100px;
+    margin-left: 15px;
     border-bottom: 1px solid #d7d7d7;
   }
   .box img{
-    width: 120px;
+    width: 45%;
     height: 80px;
-    margin-left: 9px;
     margin-top: 9px;
     float: left;
   }
   .text{
     float: left;
+    width: 55%;
+    margin-top: 10px;
   }
   .text h4{
-    width: 11rem;
+    width:9rem;
     margin-left: 10px;
     margin-top: 5px;
     overflow:hidden;
@@ -70,13 +72,12 @@
     font-size: 16px;
   }
   .text p:nth-child(2){
-    width: 11rem;
     margin-left: 10px;
     margin-top: 5px;
     overflow:hidden;
     text-overflow:ellipsis;
     white-space: nowrap;
-    font-size: 12px;
+    font-size: 14px;
     color: #666;
   }
 </style>

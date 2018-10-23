@@ -4,6 +4,10 @@ import login from '@/pages/login'
 import register from '@/pages/register'
 import main from '@/pages/main'
 import home from '@/pages/home/home'
+import lastDetail from '@/pages/home/last-detail'
+import meishiHome from '@/pages/meishi/meishihome'
+import movieHome from '@/pages/movie/moviehome'
+import meishiLastDetail from '@/pages/meishi/last-detail'
 import order from '@/pages/order'
 import my from '@/pages/my/my'
 import collection from '@/pages/my/collection'
@@ -35,6 +39,7 @@ export default new Router({
             keepAlive: true // 需要被缓存
           }
 				},
+
 				{
 					path: '/recent',
 					name: 'recent',
@@ -89,6 +94,22 @@ export default new Router({
 				}
 			]
 		},
+    {
+      path: '/meishiHome',
+      name: 'meishiHome',
+      component: meishiHome,
+      meta: {
+        keepAlive: true // 需要被缓存
+      }
+    },
+    {
+      path: '/movieHome',
+      name: 'movieHome',
+      component: movieHome,
+      meta: {
+        keepAlive: true // 需要被缓存
+      }
+    },
 		{
 			path: '/detail/:detailid',
 			name: 'detail',
@@ -114,6 +135,16 @@ export default new Router({
 			name: 'login',
 			component: login
 		},
+    {
+      path: '/lastDetail/:lastid',
+      name: 'lastDetail',
+      component: lastDetail
+    },
+    {
+      path: '/meishiLastDetail/:lastid',
+      name: 'meishiLastDetail',
+      component: lastDetail
+    },
 		{
 			path: '/register',
 			name: 'register',

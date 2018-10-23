@@ -4,7 +4,7 @@
       <img :src="list.img" alt="">
       <div class="text">
         <h4>{{list.name}}</h4>
-        <p><span class="score_wrapper"></span><span style="display: block" class="start1">{{list.start}}</span></p>
+      <!--  <p><span class="score_wrapper"></span><span style="display: none" class="start1">{{list.start}}</span></p>-->
         <p>{{list.address}}</p>
       </div>
     </router-link>
@@ -12,7 +12,7 @@
       <img :src="list.img" alt="">
       <div class="text">
         <h4>{{list.name}}</h4>
-        <p><span class=""></span><span style="display: none" class="start2">{{list.start}}</span></p>
+      <!--  <p><span class=""></span><span style="display: none" class="start2">{{list.start}}</span></p>-->
         <p>{{list.address}}</p>
       </div>
     </router-link>
@@ -20,7 +20,15 @@
       <img :src="list.img" alt="">
       <div class="text">
         <h4>{{list.name}}</h4>
-        <p><span class=""></span><span style="display: none" class="start3">{{list.start}}</span></p>
+     <!--   <p><span class=""></span><span style="display: none" class="start3">{{list.start}}</span></p>-->
+        <p>{{list.address}}</p>
+      </div>
+    </router-link>
+    <router-link :to="{name:'lastDetail',params:{lastid:list.id}}" class="list" v-for="(list,index) in lists3" :key="list.id+4" tag="div">
+      <img :src="list.img" alt="">
+      <div class="text">
+        <h4>{{list.name}}</h4>
+        <!--   <p><span class=""></span><span style="display: none" class="start3">{{list.start}}</span></p>-->
         <p>{{list.address}}</p>
       </div>
     </router-link>
@@ -35,12 +43,14 @@
               lists:[],
               lists1:[],
               lists2:[],
+              lists3:[]
             }
         },
         created(){
         this.lists = JSON.parse(localStorage.getItem('zhuangtai')),
         this.lists1 = JSON.parse(localStorage.getItem('zhuangtai1')),
-        this.lists2 = JSON.parse(localStorage.getItem('zhuangtai2'))
+        this.lists2 = JSON.parse(localStorage.getItem('zhuangtai2')),
+        this.lists3 = JSON.parse(localStorage.getItem('zhuangtai3'))
       },
         async mounted(){
         function ScoreInit(e) {
@@ -113,7 +123,7 @@
     white-space: nowrap;
     font-size: 16px;
   }
-  .text p:nth-child(3){
+  .text p:nth-child(2){
     width: 11rem;
     margin-left: 10px;
     margin-top: 5px;

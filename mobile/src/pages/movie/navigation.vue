@@ -2,10 +2,10 @@
 	<div>
 		<div class="header">
 			<div class="scan">
-				<span @click="scan">&#xe661;</span>
+				<span @click="scan">&#xe629;</span>
 			</div>
 			<div class="search_input">
-				<span v-show='exhibit'>&#xe623;</span><input type="text" v-model="this.address.city" @focus="Isfocus" @blur="Isblur" name="" id="" value="" />
+				dsad
 			</div>
 			<span class="search" @click="search">搜索</span>
 		</div>
@@ -32,7 +32,7 @@
         this.address.city=this.shuju
 			},
 			scan() {
-				alert(123)
+        this.$router.go(-1)
 			},
 			search() {
 				alert(456)
@@ -85,6 +85,7 @@
 		font-family: 'iconfont';
 		font-size: 30px;
 		text-align: center;
+    color: #24b7ab;
 	}
 
 
