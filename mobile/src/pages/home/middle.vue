@@ -95,7 +95,7 @@
         this.$router.push('/meishihome')
       },
       movie(){
-        this.$router.push('/moviehome')
+        this.$router.push('/movieHome')
       }
     }
 

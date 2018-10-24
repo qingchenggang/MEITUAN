@@ -12,38 +12,17 @@
       </div>
       <i class="search iconfont" @click="search">&#xe623;</i>
     </div>
-    <div>
-      <mu-carousel hide-controls>
-        <mu-carousel-item>
-          <img v-lazy="carouselImg1">
-        </mu-carousel-item>
-        <mu-carousel-item>
-          <img v-lazy="carouselImg2">
-        </mu-carousel-item>
-        <mu-carousel-item>
-          <img v-lazy="carouselImg3">
-        </mu-carousel-item>
-        <mu-carousel-item>
-          <img v-lazy="carouselImg4">
-        </mu-carousel-item>
-      </mu-carousel>
-    </div>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import carouselImg1 from '../../assets/images/movie/1.jpg';
-  import carouselImg2 from '../../assets/images/movie/2.jpg';
-  import carouselImg3 from '../../assets/images/movie/3.jpg';
-  import carouselImg4 from '../../assets/images/movie/4.jpg';
+
     export default {
         name: "moviehome",
         data(){
             return{
-              carouselImg1,
-              carouselImg2,
-              carouselImg3,
-              carouselImg4,
               isA:true,
               isB:false,
               isC:false,
@@ -62,27 +41,42 @@
           this.isB=false
           this.isC=false
           this.isD=false
+          this.$router.push({
+            path:'movieHome',
+          })
         },
         demand(){
           this.isA=false
           this.isB=true
           this.isC=false
           this.isD=false
+          this.$router.push({
+            path:'movieTwo',
+          })
         },
         mall(){
           this.isA=false
           this.isB=false
           this.isC=true
           this.isD=false
+          this.$router.push({
+            path:'movieThree',
+          })
         },
         show(){
           this.isA=false
           this.isB=false
           this.isC=false
           this.isD=true
+          this.$router.push({
+            path:'movieFour',
+          })
         }
 
-      }
+      },
+      mounted(){
+         this.$router.push('movieHome')
+      },
     }
 </script>
 
@@ -182,7 +176,7 @@
     /*border: 1px solid black;*/
     float: left;
     line-height: 63px;
-    margin-left: 15px;
+    margin-left: 40px;
     color: #24b7ab;
     font-size: 20px;
   }

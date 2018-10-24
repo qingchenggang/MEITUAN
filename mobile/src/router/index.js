@@ -7,6 +7,11 @@ import home from '@/pages/home/home'
 import lastDetail from '@/pages/home/last-detail'
 import meishiHome from '@/pages/meishi/meishihome'
 import movieHome from '@/pages/movie/moviehome'
+import movieDetail from '@/pages/movie/moviedetail'
+import movieOne from '@/pages/movie/movieone'
+import movieTwo from '@/pages/movie/movietwo'
+import movieThree from '@/pages/movie/moviethree'
+import movieFour from '@/pages/movie/moviefour'
 import meishiLastDetail from '@/pages/meishi/last-detail'
 import order from '@/pages/order'
 import my from '@/pages/my/my'
@@ -107,8 +112,42 @@ export default new Router({
       name: 'movieHome',
       component: movieHome,
       meta: {
-        keepAlive: true // 需要被缓存
-      }
+        keepAlive: false // 需要被缓存
+      },
+      children:[
+        {
+          path: '',
+          name: 'movieOne',
+          component: movieOne,
+          meta: {
+            keepAlive: false // 需要被缓存
+          }
+        },
+        {
+          path: '/movieTwo',
+          name: 'movieTwo',
+          component: movieTwo,
+          meta: {
+            keepAlive: false // 需要被缓存
+          }
+        },
+        {
+          path: '/movieThree',
+          name: 'movieThree',
+          component: movieThree,
+          meta: {
+            keepAlive: false // 需要被缓存
+          }
+        },
+        {
+          path: '/movieFour',
+          name: 'movieFour',
+          component: movieFour,
+          meta: {
+            keepAlive: false // 需要被缓存
+          }
+        }
+      ]
     },
 		{
 			path: '/detail/:detailid',
@@ -135,6 +174,11 @@ export default new Router({
 			name: 'login',
 			component: login
 		},
+    {
+      path: '/movieDetail/:movieid',
+      name: 'movieDetail',
+      component: movieDetail
+    },
     {
       path: '/lastDetail/:lastid',
       name: 'lastDetail',

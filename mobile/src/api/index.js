@@ -27,3 +27,7 @@ export const reqplaydetail=()=>ajax(BASE_URL+'/playdetail')
 export const reqguess=()=>ajax(BASE_URL+'/guess')
 //12.首页猜你喜欢详情数据
 export const reqguessdetail=()=>ajax(BASE_URL+'/guessdetail')
+//13.电影数据
+export const reqmovie=()=>ajax(BASE_URL+'/movie')
+//13.电影院数据
+export const reqcinema=()=>ajax(BASE_URL+'/cinema')
