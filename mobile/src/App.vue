@@ -24,6 +24,7 @@ export default {
     //this.$store.dispatch('getaddress')
    this.getaddress()
    this.getid()
+
   },
   methods:{
     ...mapActions(['getaddress','getid'])

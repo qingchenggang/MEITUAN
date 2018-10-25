@@ -46,7 +46,7 @@
         // this.$router.push({ //刷新回到首页
         // 	path: '/home?id=1'
         // });
-        //console.log(from,to)
+      //  console.log(from,to)
         if(to.query.id!='undefined'){
           // this.id = JSON.stringify(to.query.id)
      //  console.log(to.query.id)

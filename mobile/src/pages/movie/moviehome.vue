@@ -31,7 +31,9 @@
         },
       methods:{
         scan(){
-          this.$router.go(-1)
+          this.$router.push({
+            path:'home?id=1',
+          })
           },
         search(){
 

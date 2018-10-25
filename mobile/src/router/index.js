@@ -187,7 +187,7 @@ export default new Router({
     {
       path: '/meishiLastDetail/:lastid',
       name: 'meishiLastDetail',
-      component: lastDetail
+      component: meishiLastDetail
     },
 		{
 			path: '/register',
