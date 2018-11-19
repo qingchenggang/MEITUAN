@@ -12,6 +12,8 @@ import movieOne from '@/pages/movie/movieone'
 import movieTwo from '@/pages/movie/movietwo'
 import movieThree from '@/pages/movie/moviethree'
 import movieFour from '@/pages/movie/moviefour'
+import review from '@/pages/movie/review'
+import moviedianbo from '@/pages/movie/moviedianbo'
 import meishiLastDetail from '@/pages/meishi/last-detail'
 import order from '@/pages/order'
 import my from '@/pages/my/my'
@@ -175,9 +177,20 @@ export default new Router({
 			component: login
 		},
     {
+      path: '/review',
+      name: 'review',
+      component: review,
+     /* meta: {
+        keepAlive: true // 需要被缓存
+      }*/
+    },
+    {
       path: '/movieDetail/:movieid',
       name: 'movieDetail',
-      component: movieDetail
+      component: movieDetail,
+      meta: {
+        keepAlive: false // 需要被缓存
+      }
     },
     {
       path: '/lastDetail/:lastid',
@@ -188,6 +201,11 @@ export default new Router({
       path: '/meishiLastDetail/:lastid',
       name: 'meishiLastDetail',
       component: meishiLastDetail
+    },
+    {
+      path: '/moviedianbo/:dianboid',
+      name: 'moviedianbo',
+      component: moviedianbo
     },
 		{
 			path: '/register',

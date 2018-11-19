@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="movietoday">
       <div class="footer-div">
         <div class="footer-concent" v-for="(list,index) in dizhi" :key="index">
           <div style="display: inline-block">
@@ -64,8 +64,8 @@
           const result=await reqmovie()
           this.lists = result
           var as=this.$route.params.movieid//当前页面数据下标
-          console.log(this.lists[as-1].dizhi)
-          this.dizhi=this.lists[as-1].dizhi
+        //  console.log(this.lists[as-1].today)
+          this.dizhi=this.lists[as-1].today
         }
     }
 </script>

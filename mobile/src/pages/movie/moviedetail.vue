@@ -25,28 +25,30 @@
               <p> > </p>
             </div>
             <div class="first-footer">
-              <div class="want"><i class="iconfont">&#xe61a;</i>&nbsp;想看</div>
-              <div class="getscore"><i class="iconfont">&#xe646;</i>&nbsp;评分</div>
+              <div class="want" @click="want(list.want,list.id)"  v-if="list.want==false"><i class="iconfont">&#xe61a;</i>&nbsp;<span>想看</span></div>
+              <div class="want" @click="want(list.want,list.id)" v-if="list.want==true"><i class="iconfont" >&#xe65d;</i>&nbsp;<span>已想看</span></div>
+              <div class="getscore" @click="getscore(list.id)" v-if="list.start==0"><i class="iconfont">&#xe646;</i>&nbsp;<span>评分</span></div>
+              <div class="getscore" @click="getscore(list.id)" v-if="list.start!=0"><i class="iconfont">&#xe6b0;</i>&nbsp;<span>{{list.start}}分</span></div>
             </div>
 
           </div>
       </div>
       <div class="second">
         <div class="timexuan">
-          <div class="timexuandiv">
-            <div @click="today" :class="{'isColor':isa}">
-              <p ><span>今天</span><span class="today"></span></p>
+          <div class="timexuandiv" style="transition:all .3s linear ">
+            <div @click="today"  :class="{'isColor':isa}">
+              <p ><span class="jintian" >今天</span><span class="today"></span></p>
             </div>
-            <div @click="tomorrow" :class="{'isColor':isb}">
-              <p ><span>明天</span><span class="tomorrow"></span></p>
+            <div @click="tomorrow"  :class="{'isColor':isb}">
+              <p ><span class="mingtian">明天</span><span class="tomorrow"></span></p>
             </div>
-            <div @click="aftertomorrow" :class="{'isColor':isc}">
+            <div @click="aftertomorrow"   :class="{'isColor':isc}">
               <p ><span class="houtian"></span><span class="aftertomorrow"></span></p>
             </div>
-            <div @click="after2tomorrow" :class="{'isColor':isd}">
+            <div @click="after2tomorrow"  :class="{'isColor':isd}">
               <p ><span class="waitian"></span><span class="after2tomorrow"></span></p>
             </div>
-            <div @click="anther" :class="{'isColor':ise}">
+            <div @click="anther"  :class="{'isColor':ise}">
               <p ><span class="anther"></span></p>
             </div>
           </div>
@@ -103,12 +105,33 @@
             isb:false,
             isc:false,
             isd:false,
-            ise:false
+            ise:false,
+            isbian:false,
+            dd:false
           }
         },
         async mounted(){
+          window.addEventListener('scroll',this.handleScroll,true)
           const result=await reqmovie()
           this.lists = result
+          let ha= JSON.parse(localStorage.getItem('moviex'))//取值(点击想看时取得值)
+        // alert(this.$route.params.movieid)
+
+          if(ha==null){
+            this.lists=this.lists
+           /* alert(this.lists[this.$route.params.movieid-1].start)*/
+          }else{
+            this.lists=ha
+           /* alert(this.lists[this.$route.params.movieid-1].start)*/
+          }
+
+         /* let haha=JSON.parse(localStorage.getItem('moviex'))//取值(点击得分看时取得值)
+          console.log(haha)*/
+         /* if(haha==null){
+            this.lists=this.lists
+          }else{
+            this.lists=haha
+          }*/
           var now = new Date(); //当前日期
           var nowMonth = now.getMonth()+1; //当前月
           var nowDay = now.getDate(); //当前日
@@ -149,7 +172,7 @@
             $(".houtian").html('周一')
             $(".waitian").html('周二')
           }
-         // alert(today)
+          localStorage.setItem('moviex', JSON.stringify(this.lists));//存值(为review页面有用的)
         },
         components: {
           movietoday,
@@ -160,7 +183,9 @@
         },
         methods:{
           scan(){
-            this.$router.go(-1)
+            this.$router.push({
+              path:"/movieHome",
+            })
           },
           search(){
 
@@ -188,6 +213,8 @@
               this.isc=false,
               this.isd=false,
               this.ise=false
+            $(".timexuandiv").css({"margin-left":"0px"})
+
           },
           aftertomorrow(){
               this.isA=false,
@@ -200,6 +227,9 @@
               this.isc=true,
               this.isd=false,
               this.ise=false
+              $(".timexuandiv").css({"margin-left":"-120px"})
+
+
           },
           after2tomorrow(){
               this.isA=false,
@@ -212,6 +242,7 @@
               this.isc=false,
               this.isd=true,
               this.ise=false
+            $(".timexuandiv").css({"margin-left":"-240px"})
           },
           anther(){
               this.isA=false,
@@ -225,6 +256,37 @@
               this.isd=false,
               this.ise=true
           },
+          handleScroll(e){
+            console.log(e.target.scrollTop)
+            if(e.target.scrollTop>=200 && e.target.scrollTop<=210 ){
+              $(".timexuan").css({"position": "fixed","top": "60px"," background-color: ;":"red","z-index":"9999"})
+              $(".title").css({"position": "fixed","top": "100px"})
+              $("#movietoday").css({"position": "static"})
+            }else if(e.target.scrollTop<210){
+              $(".timexuan").css({"position": "static"})
+              $(".title").css({"position": "static"})
+              $(".footer-div").css({"position": "static"})
+            }
+          },
+          want(want,id){
+            if(this.lists[id-1].want==false){
+              this.lists[id-1].want=true
+            }else{
+              this.lists[id-1].want=false
+            }
+            localStorage.setItem('moviex', JSON.stringify(this.lists));//存值(点击想看时改变值并存进去)
+          },
+          getscore(id){
+              this.$router.push({
+                path:"/review",
+                query: {
+                  id: id
+                }
+              })
+          },
+          search(){
+
+          }
       }
     }
 </script>
@@ -239,6 +301,7 @@
     top: 0;
     z-index: 99;
     left: 0;
+
   }
   @font-face {
     font-family: 'iconfont';
@@ -389,9 +452,9 @@
   }
   .timexuan{
     width: 100%;
-    height: 35px;
+    height: 40px;
     clear: both;
-    line-height: 35px;
+    line-height: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -403,20 +466,24 @@
     flex-direction: row;
     overflow-x: auto;
 
+    background-color: white;
   }
   .timexuandiv{
-    width: 100%;
-    margin-left: 20px;
+    width: auto;
+    height: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+   /* border:1px solid black;*/
+    overflow-x: auto;
   }
   .timexuan div:nth-child(1) p{
   /*  border: 1px solid red;*/
     width: 100px;
     text-align: center;
+    margin-left: 20px;
   }
   .timexuan div:nth-child(2) p{
    /* border: 1px solid red;*/
@@ -452,6 +519,7 @@
     border: 1px solid #f0ecec;
     border-right: 0;
     border-left:0 ;
+    background-color: white;
   }
   .title-div{
     width: 100px;

@@ -29,5 +29,7 @@ export const reqguess=()=>ajax(BASE_URL+'/guess')
 export const reqguessdetail=()=>ajax(BASE_URL+'/guessdetail')
 //13.电影数据
 export const reqmovie=()=>ajax(BASE_URL+'/movie')
-//13.电影院数据
+//14.电影院数据
 export const reqcinema=()=>ajax(BASE_URL+'/cinema')
+//15.点播电影院数据
+export const reqdianCinema=()=>ajax(BASE_URL+'/dianCinema')

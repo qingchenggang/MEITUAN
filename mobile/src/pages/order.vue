@@ -25,23 +25,27 @@
         <p>全部订单</p>
       </div>
     </div>
-  </div>
-<!--	<div>
-		订单
     <p> {{count}}</p>
     <button @click="add">+</button>
     <button @click="reduce">-</button>
-	</div>-->
+  </div>
+
 </template>
 
 <script>
   import {mapState,mapMutations} from 'vuex'
+  import {reqbroadcast} from "../api";
   export default {
     name:'order',
     data(){
       return{
-
+        lists:[]
       }
+    },
+    async mounted(){
+      const result=await reqbroadcast()
+      this.lists = result
+      console.log(this.lists)
     },
     methods:{
 
