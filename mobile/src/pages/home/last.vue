@@ -30,9 +30,9 @@
         },
       mounted(){
         axios.get('http://192.168.0.149:3002/guess').then(res => {
-          console.log(res.data)
+         // console.log(res.data)
           this.lists = res.data
-          console.log(this.products)
+          //console.log(this.products)
         }, err => {
           console.log(err)
         })

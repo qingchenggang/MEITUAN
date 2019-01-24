@@ -83,6 +83,7 @@
 <script>
 
   import {reqguessdetail} from "../../api";
+  import axios from 'axios'
   export default {
     name: "last-detail",
     data(){
@@ -99,9 +100,16 @@
         xian:false
       }
     },
-    async mounted(){
-      const result=await reqguessdetail()
-      this.lists = result
+    mounted(){
+      axios.get('http://192.168.0.149:3002/guessdetail').then(res => {
+        console.log(res.data)
+        this.lists = res.data
+        console.log(this.products)
+      }, err => {
+        console.log(err)
+      })
+     /* const result=await reqguessdetail()
+      this.lists = result*/
       function ScoreInit(e) {
         Score((e == null) ? 0 : e); //传空默认0颗星
         $(".score_wrapper").bind('click', function (e) {
