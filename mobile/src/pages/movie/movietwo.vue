@@ -53,6 +53,8 @@
           this.lists = result
           this.lists1 = result1
 
+          localStorage.setItem('dianbo', JSON.stringify(this.lists1));
+
         }
     }
 </script>

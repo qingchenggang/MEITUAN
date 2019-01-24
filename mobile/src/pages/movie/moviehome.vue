@@ -44,7 +44,7 @@
           this.isC=false
           this.isD=false
           this.$router.push({
-            path:'movieHome',
+            path:'/movieOne',
           })
         },
         demand(){
@@ -53,7 +53,7 @@
           this.isC=false
           this.isD=false
           this.$router.push({
-            path:'movieTwo',
+            path:'/movieTwo',
           })
         },
         mall(){
@@ -62,7 +62,7 @@
           this.isC=true
           this.isD=false
           this.$router.push({
-            path:'movieThree',
+            path:'/movieThree',
           })
         },
         show(){
@@ -71,13 +71,13 @@
           this.isC=false
           this.isD=true
           this.$router.push({
-            path:'movieFour',
+            path:'/movieFour',
           })
         }
 
       },
       mounted(){
-         this.$router.push('movieHome')
+        //this.$router.push('movieOne')
       },
     }
 </script>

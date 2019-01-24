@@ -184,7 +184,7 @@
         methods:{
           scan(){
             this.$router.push({
-              path:"/movieHome",
+              path:"/movieOne",
             })
           },
           search(){

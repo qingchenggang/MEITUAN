@@ -2,7 +2,7 @@
 包含n个接口请求函数的模块
 */
 import ajax from "./ajax"
-const BASE_URL='http://localhost:3000'
+const BASE_URL='http://localhost:3002'
 //1.获取轮播图数据
 export const reqbroadcast=()=>ajax(BASE_URL+'/broadcast')
 //2.获取home页面中middle的页面数据

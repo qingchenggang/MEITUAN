@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import login from '@/pages/login'
+import helloworld from '@/pages/helloworld'
 import register from '@/pages/register'
 import main from '@/pages/main'
 import home from '@/pages/home/home'
@@ -118,7 +119,7 @@ export default new Router({
       },
       children:[
         {
-          path: '',
+          path: '/movieOne',
           name: 'movieOne',
           component: movieOne,
           meta: {
@@ -161,6 +162,7 @@ export default new Router({
       name: 'meishiDetail',
       component: meishiDetail
     },
+
     {
       path: '/lifeDetail/:lifeid',
       name: 'lifeDetail',
@@ -176,6 +178,11 @@ export default new Router({
 			name: 'login',
 			component: login
 		},
+    {
+      path: '/helloworld/',
+      name: 'helloworld',
+      component: helloworld
+    },
     {
       path: '/review',
       name: 'review',

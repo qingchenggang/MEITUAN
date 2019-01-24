@@ -1,15 +1,17 @@
 <template>
-    <div>
+    <div id="moviethree">
       3
     </div>
 </template>
 
 <script>
     export default {
-        name: "movieone"
+        name: "moviethree"
     }
 </script>
 
 <style scoped>
-
+#moviethree{
+  margin-top: 62px;
+}
 </style>

@@ -18,8 +18,11 @@ import VueLazyLoad from 'vue-lazyload' //图片懒加载
 import './style.css'
 import VueDirectiveImagePreviewer from 'vue-directive-image-previewer'
 import 'vue-directive-image-previewer/dist/assets/style.css'
-
+import VConsole from 'vconsole/dist/vconsole.min.js' //import vconsole
+let vConsole = new VConsole() // 初始化
 Vue.config.productionTip = false
+import axios from 'axios'
+Vue.prototype.$http = axios
 Vue.use(MuseUI);
 Vue.use(Vant);
 Vue.use(Mint);

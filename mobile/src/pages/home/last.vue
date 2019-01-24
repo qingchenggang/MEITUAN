@@ -20,6 +20,7 @@
 
 <script>
   import {reqguess} from "../../api";
+  import axios from 'axios'
     export default {
         name: "last",
         data(){
@@ -27,9 +28,14 @@
             lists:[],
           }
         },
-      async mounted(){
-        const result=await reqguess()
-        this.lists = result
+      mounted(){
+        axios.get('http://192.168.0.149:3002/guess').then(res => {
+          console.log(res.data)
+          this.lists = res.data
+          console.log(this.products)
+        }, err => {
+          console.log(err)
+        })
       }
     }
 </script>

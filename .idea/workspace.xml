@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56521487-3cc4-4d45-bd8a-c932ab32829e" name="默认" comment="">
-      <change afterPath="$PROJECT_DIR$/mobile/src/pages/home/last.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/home/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/home/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/home/middle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/home/middle.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/home/navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/home/navigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/my/business-collection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/my/business-collection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/one.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/one.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/three.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/three.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/src/pages/recent/two.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/recent/two.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/icon/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/icon/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/icon/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/icon/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/icon/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/icon/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/pages/movie/moviedetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/movie/moviedetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/pages/movie/moviedianbo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/movie/moviedianbo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/pages/movie/moviefour.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/movie/moviefour.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/pages/movie/moviehome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/movie/moviehome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/pages/movie/moviethree.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/movie/moviethree.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/pages/movie/movietwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/pages/movie/movietwo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/src/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -106,10 +108,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="20" />
-    <option name="y" value="-15" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
     <option name="width" value="1940" />
-    <option name="height" value="1104" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -217,15 +219,15 @@
       <workItem from="1540171842141" duration="3252000" />
       <workItem from="1540197049691" duration="248000" />
       <workItem from="1540200047339" duration="607000" />
+      <workItem from="1547175486969" duration="860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149040000" />
+    <option name="totallyTimeSpent" value="149900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2007926" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -235,7 +237,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.20684735" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21968617" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -250,20 +252,20 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.07926024" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3281027" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="调试" order="11" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>

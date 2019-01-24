@@ -11,7 +11,7 @@
           <p>电影/演出</p>
         </div>
         <div>
-          <i class="iconfont hotel">&#xe67a;</i>
+          <i class="iconfont hotel" @click="hotel">&#xe67a;</i>
           <p>酒店/住宿</p>
         </div>
         <div>
@@ -96,6 +96,9 @@
       },
       movie(){
         this.$router.push('/movieHome')
+      },
+      hotel(){
+        this.$router.push('/helloworld')
       }
     }
 
